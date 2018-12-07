@@ -14,13 +14,11 @@ const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: '#ff5722',
-    },
-    secondary: {
-      main: '#8bc34a'
+      main: '#E91E63',
     }
   },
 });
+
 class App extends React.Component {
 
   render() {
@@ -36,7 +34,8 @@ class App extends React.Component {
           <div className={styles.content}>
             Welcome to your first React WEB application. Here we are going to create a page with most beautiful places to visit.
           </div>
-          <Footer />
+          <Footer>
+          </Footer>
         </div>
       </MuiThemeProvider>
     );

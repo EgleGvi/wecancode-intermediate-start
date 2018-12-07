@@ -1,10 +1,7 @@
-.appBar {
-  top: auto !important;
-  bottom: 0;
-  height: 64px;
-}
-
-.toolbar {
-  align-items: center;
-  justify-content: space-between;
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 10px 0;
 }

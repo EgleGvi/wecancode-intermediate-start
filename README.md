@@ -3,7 +3,7 @@
 **Pradinis variantas**: https://github.com/akimirka/wecancode-intermediate-start.git
 
 
-**Galutinis variantas**: https://github.com/crownz/wecancode-intermediate.git
+**Galutinis variantas**: https://github.com/akimirka/wecancode-intermediate-start/tree/final-project
 
 ## Praktinis darbas
 
@@ -327,14 +327,14 @@
       <TweetForm isOpen={this.state.isFormOpen} onClose={this.closeForm} />
     </div>
     <Footer>
-    <Button
+      <Button
         color="primary"
         variant="extendedFab"
         aria-label="Create"
         onClick={this.openForm}
         >
         Create new destination
-    </Button>
+      </Button>
     </Footer>
     ```
 
