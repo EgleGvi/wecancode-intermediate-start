@@ -1,9 +1,14 @@
 import React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Button from "@material-ui/core/Button";
+import CreateIcon from "@material-ui/icons/Create";
 
 import Typography from '@material-ui/core/Typography';
 import Header from './components/header';
+import Footer from './components/footer';
+import TweetList from "./components/tweet-list";
+import TweetForm from "./components/tweet-form";
 
 import styles from './app.module.scss';
 
@@ -20,6 +25,18 @@ const theme = createMuiTheme({
 
 class App extends React.Component {
 
+  state = {
+    isFormOpen: false
+  };
+  
+  openForm = () => {
+    this.setState({ isFormOpen: true });
+  };
+  
+  closeForm = () => {
+    this.setState({ isFormOpen: false });
+  };
+
   render() {
     return (
       <MuiThemeProvider theme={theme}>
@@ -31,8 +48,21 @@ class App extends React.Component {
             </Typography>
           </Header>
           <div className={styles.content}>
-            Welcome to your first React WEB application. Here we are going to create a page with most beautiful places to visit.
+            <TweetList />
+            <TweetForm isOpen={this.state.isFormOpen} onClose={this.closeForm} />
+  
           </div>
+          <Footer>
+            <Button
+              color="primary"
+              variant="extendedFab"
+              aria-label="Create"
+              onClick={this.openForm}
+            >
+              <CreateIcon />
+              Create new destination
+            </Button>
+          </Footer>
         </div>
       </MuiThemeProvider>
     );
