@@ -326,7 +326,6 @@
       <TweetList />
       <TweetForm isOpen={this.state.isFormOpen} onClose={this.closeForm} />
     </div>
-    <Footer>
     <Button
         color="primary"
         variant="extendedFab"
@@ -335,7 +334,6 @@
         >
         Create new destination
     </Button>
-    </Footer>
     ```
 
     * 5.7 Galime pridėti ikoną *App.js*:
